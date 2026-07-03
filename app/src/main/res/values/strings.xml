@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">XTerminal</string>
+    <string name="sessions">Sessions</string>
+    <string name="settings">Settings</string>
+    <string name="downloading">Downloading...</string>
+    <string name="please_select_a_distribution_to_download_and_install">Please select a distribution to download and install.</string>
+</resources>

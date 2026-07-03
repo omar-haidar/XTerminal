@@ -1,0 +1,58 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace = 'dev.omar.xterminal'
+    //noinspection GradleDependency
+    compileSdk = rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "dev.omar.xterminal"
+        minSdk 24
+        //noinspection OldTargetApi
+        targetSdk 36
+        versionCode 1
+        versionName "1.0.0"
+
+    }
+
+    buildTypes {
+        release {
+            optimization {
+                enable =  false
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility = rootProject.ext.javaSourceVersion
+        targetCompatibility = rootProject.ext.javaTargetVersion
+    }
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+        aidl = true
+    }
+
+    packaging {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+
+}
+
+dependencies {
+    implementation libs.activity.ktx
+    implementation libs.appcompat
+    implementation libs.constraintlayout
+    implementation libs.material
+
+    implementation libs.okhttp
+    implementation libs.utilcodex
+
+
+    implementation(project(":terminal-view"))
+    implementation(project(":terminal-emulator"))
+
+}
