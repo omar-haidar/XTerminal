@@ -1,0 +1,197 @@
+{
+  "debian": {
+    "name": "id.debian",
+    "icon": "debian.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v${version}/debian-${release}-${architecture}-pd-v${version}.tar.xz",
+    "architectures": ["aarch64", "arm", "x86_64"],
+    "releases": [
+      {
+        "trixie": { "name": "id.trixie", "version": "4.29.0" },
+        "bookworm": { "name": "id.bookworm", "version": "4.17.3" },
+        "bullseye": { "name": "id.bullseye", "version": "4.7.0" }
+      }
+    ]
+  },
+  "ubuntu": {
+    "name": "id.ubuntu",
+    "icon": "ubuntu.png",
+    "url": "https://cdimage.ubuntu.com/ubuntu-base/releases/${release}/release/ubuntu-base-${.*}-base-${arch}.tar.gz",
+    "architectures": ["arm64", "amd64", "armhf"],
+    "releases": [
+      {
+        "trusty": { "name": "id.trusty", "version": "14" },
+        "xenial": { "name": "id.xenial", "version": "16" },
+        "bionic": { "name": "id.bionic", "version": "18" },
+        "focal": { "name": "id.focal", "version": "20" },
+        "jammy": { "name": "id.jammy", "version": "22" },
+        "noble": { "name": "id.noble", "version": "24" },
+        "questing": { "name": "id.questing", "version": "25" }
+      }
+    ]
+  },
+  "backbox": {
+    "name": "id.backbox",
+    "icon": "backbox.png",
+    "url": "https://github.com/EXALAB/Anlinux-Resources/raw/refs/heads/master/Rootfs/BackBox/${architecture}/backbox-rootfs-${architecture}.tar.xz",
+    "architectures": ["arm64", "amd64", "armhf"]
+  },
+  "centos_stream": {
+    "name": "id.centos_stream",
+    "icon": "centos_stream.png",
+    "url": "https://github.com/EXALAB/Anlinux-Resources/raw/refs/heads/master/Rootfs/CentOS_Stream/${architecture}/centos_stream-rootfs-${architecture}.tar.xz",
+    "architectures": ["arm64", "amd64"]
+  },
+  "parrot": {
+    "name": "id.parrot",
+    "icon": "parrot.png",
+    "url": "https://github.com/EXALAB/Anlinux-Resources/raw/refs/heads/master/Rootfs/Parrot/${architecture}/parrot-rootfs-${architecture}.tar.xz",
+    "architectures": ["arm64", "amd64", "armhf"]
+  },
+  "arch": {
+    "name": "id.arch",
+    "icon": "arch.png",
+    "url": "https://ca.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${architecture}-latest.tar.gz",
+    "architectures": ["aarch64", "armv7"]
+  },
+  "arch_x64": {
+    "name": "id.arch",
+    "icon": "arch.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.34.2/archlinux-${architecture}-pd-v4.34.2.tar.xz",
+    "architectures": ["x86_64","i686"]
+  },
+  "void": {
+    "name": "id.void",
+    "icon": "void.png",
+    "url": "https://repo-default.voidlinux.org/live/current/void-${architecture}-ROOTFS-${.*}.tar.xz",
+    "architectures": ["aarch64", "armv7", "x86_64","i686"]
+  },
+  "alpine": {
+    "name": "id.alpine",
+    "icon": "alpine.png",
+    "url": "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/${architecture}/alpine-minirootfs-${.*}-${architecture}.tar.gz",
+    "architectures": ["aarch64", "armv7", "x86_64","i686"]
+  },
+  "gentoo": {
+    "name": "id.gentoo",
+    "icon": "gentoo.png",
+    "url": "https://gentoo.osuosl.org/releases/${architecture}/autobuilds/current-stage3-${architecture}-systemd/stage3-${architecture}-systemd-${.*}.tar.xz",
+    "architectures": ["arm64", "arm", "amd64","x86"]
+  },
+  "manjaro": {
+    "name": "id.manjaro",
+    "icon": "manjaro.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.34.2/manjaro-aarch64-pd-v4.34.2.tar.xz",
+    "architectures": ["aarch64"]
+  },
+  "opensuse": {
+    "name": "id.opensuse",
+    "icon": "opensuse.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v${version}/opensuse-${architecture}-pd-v${version}.tar.xz",
+    "architectures": ["aarch64","x86_64","arm","i686"],
+    "releases": [
+      {
+        "opensuse": { "name": "id.opensuse", "version": "4.34.2" },
+        "opensuse_x64": { "name": "id.opensusex64", "version": "4.21.0" }
+      }
+    ]
+  },
+  "openkylin": {
+    "name": "id.openkylin",
+    "icon": "openkylin.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.10.0/openkylin-${architecture}-pd-v4.10.0.tar.xz",
+    "architectures": ["aarch64","x86_64"]
+  },
+  "pardus": {
+    "name": "id.pardus",
+    "icon": "pardus.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.33.2/pardus-${architecture}-pd-v4.33.2.tar.xz",
+    "architectures": ["aarch64","x86_64","i686"]
+  },
+  "amla": {
+    "name": "id.amla",
+    "icon": "amla.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.31.0/almalinux-${architecture}-pd-v4.31.0.tar.xz",
+    "architectures": ["aarch64","x86_64"]
+  },
+  "fedora": {
+    "name": "id.fedora",
+    "icon": "fedora.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v${version}/fedora-${architecture}-pd-v${version}.tar.xz",
+    "architectures": ["aarch64","x86_64"],
+    "releases": [
+      {
+        "fedora43": { "name": "id.fedora43", "version": "4.31.0" },
+        "fedora42": { "name": "id.fedora42", "version": "4.24.0" },
+        "fedora41": { "name": "id.fedora41", "version": "4.23.0" },
+        "fedora40": { "name": "id.fedora40", "version": "4.15.0" }
+      }
+    ]
+  },
+  "artix": {
+    "name": "id.artix",
+    "icon": "artix.png",
+    "url":"https://github.com/termux/proot-distro/releases/download/v4.29.0/artix-aarch64-pd-v4.29.0.tar.xz",
+    "architectures": ["aarch64"]
+  },
+  "deepin": {
+    "name": "id.deepin",
+    "icon": "deepin.png",
+    "url":"https://github.com/termux/proot-distro/releases/download/v4.29.0/deepin-${architecture}-pd-v4.29.0.tar.xz",
+    "architectures": ["aarch64","x86_64"]
+  },
+  "rocky": {
+    "name": "id.rocky",
+    "icon": "rocky.png",
+    "url":"https://github.com/termux/proot-distro/releases/download/v4.29.0/rocky-${architecture}-pd-v4.29.0.tar.xz",
+    "architectures": ["aarch64","x86_64"]
+  },
+  "orcale": {
+    "name": "id.orcale",
+    "icon": "orcale.jpg",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.31.0/oraclelinux-${architecture}-pd-v4.31.0.tar.xz",
+    "architectures": ["aarch64","x86_64"]
+  },
+  "trisquel": {
+    "name": "id.trisquel",
+    "icon": "trisquel.png",
+    "url": "https://github.com/termux/proot-distro/releases/download/v4.31.0/trisquel-${architecture}-pd-v4.31.0.tar.xz",
+    "architectures": ["aarch64", "arm", "x86_64","i686"]
+  },
+  "chimera": {
+    "name": "id.chimera",
+    "icon": "chimera.png",
+    "url": "https://repo.chimera-linux.org/live/latest/chimera-linux-${architecture}-ROOTFS-${.*}-${release}.tar.gz",
+    "architectures": ["aarch64", "x86_64"],
+    "releases": [
+      {
+        "bootstrap": { "name": "id.mini", "version": "bootstrap" },
+        "full": { "name": "id.full", "version": "full" }
+      }
+    ]
+  },
+  "adelie": {
+    "name": "id.adelie",
+    "icon": "adelie.png",
+    "url": "https://distfiles.adelielinux.org/adelie/1.0-beta6/iso/adelie-rootfs-${release}-${architecture}-${.*}.txz",
+    "architectures": ["aarch64", "x86_64","armv7"],
+    "releases": [
+      {
+        "mini": { "name": "id.mini", "version": "mini" },
+        "full": { "name": "id.full", "version": "full" }
+      }
+    ]
+  },
+  "kali": {
+    "name": "id.kali",
+    "icon": "kali.png",
+    "url": "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-${release}-${architecture}.tar.xz",
+    "architectures": ["arm64", "amd64", "armhf"],
+    "releases": [
+      {
+        "nano": { "name": "id.nano", "version": "nano" },
+        "mini": { "name": "id.mini", "version": "mini" },
+        "full": { "name": "id.full", "version": "full" }
+      }
+    ]
+  }
+}
