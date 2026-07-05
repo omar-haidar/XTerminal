@@ -1,7 +1,6 @@
 package dev.omar.xterminal.utils;
 
 import android.os.Build;
-import android.text.style.TtsSpan;
 
 import androidx.annotation.Nullable;
 

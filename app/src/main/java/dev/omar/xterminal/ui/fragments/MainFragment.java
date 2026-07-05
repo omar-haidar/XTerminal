@@ -1,6 +1,5 @@
 package dev.omar.xterminal.ui.fragments;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +15,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import dev.omar.xterminal.R;
 import dev.omar.xterminal.databinding.FragmentMainBinding;
-import dev.omar.xterminal.settings.SettingsActivity;
+import dev.omar.xterminal.ui.settings.SettingsActivity;
 
 public class MainFragment extends BaseFragment {
 

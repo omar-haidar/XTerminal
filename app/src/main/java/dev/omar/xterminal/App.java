@@ -1,6 +1,7 @@
 package dev.omar.xterminal;
 
 import android.app.Application;
+import android.os.Build;
 
 import com.blankj.utilcode.util.Utils;
 
@@ -17,6 +18,7 @@ public class App extends Application {
         CrashReportActivity.initCrashHandler(this);
         Utils.init(this);
         Environment.init(this);
+        
     }
 
     public static App getApp() {

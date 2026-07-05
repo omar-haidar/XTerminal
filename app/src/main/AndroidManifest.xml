@@ -63,7 +63,7 @@
         </provider>
 
         <activity
-            android:name=".settings.SettingsActivity"
+            android:name=".ui.settings.SettingsActivity"
             android:exported="false"
             android:label="@string/settings"
             android:windowSoftInputMode="adjustResize" />

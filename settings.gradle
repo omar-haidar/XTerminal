@@ -33,6 +33,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "XTerminal"
-include ':app'
-include ':terminal-emulator'
-include ':terminal-view'
+include(":app")
+include(":terminal-view")
+include(":terminal-emulator")
+

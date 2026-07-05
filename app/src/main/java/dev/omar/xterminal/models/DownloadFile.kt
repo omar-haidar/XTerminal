@@ -1,4 +1,4 @@
-package dev.omar.xterminal.models
+package dev.omar.xterminal.models;
 
 import java.io.File
 

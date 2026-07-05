@@ -112,6 +112,7 @@ public class TerminalBackEnd implements TerminalViewClient, TerminalSessionClien
         return false;
     }
 
+
     @Override
     public boolean isTerminalViewSelected() {
         return true;
