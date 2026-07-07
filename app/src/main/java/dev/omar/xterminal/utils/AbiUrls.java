@@ -26,7 +26,7 @@ public enum AbiUrls {
             "https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/aarch64/alpine-minirootfs-3.21.0-aarch64.tar.gz")
     ));
 
-    private AbiUrl abiUrl;
+    private final AbiUrl abiUrl;
 
     AbiUrls(AbiUrl abiUrl) {
         this.abiUrl = abiUrl;

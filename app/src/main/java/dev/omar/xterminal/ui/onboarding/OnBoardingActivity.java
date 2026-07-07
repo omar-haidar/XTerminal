@@ -2,9 +2,6 @@ package dev.omar.xterminal.ui.onboarding;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import com.github.appintro.AppIntro2;
 import com.github.appintro.AppIntroPageTransformerType;
 
@@ -35,13 +32,5 @@ public class OnBoardingActivity extends AppIntro2 {
         setSwipeLock(true);
     }
 
-    @Override
-    protected void onSkipPressed(@Nullable Fragment currentFragment) {
-        super.onSkipPressed(currentFragment);
-    }
 
-    @Override
-    protected void onDonePressed(@Nullable Fragment currentFragment) {
-        super.onDonePressed(currentFragment);
-    }
 }

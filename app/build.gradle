@@ -53,6 +53,7 @@ dependencies {
     implementation libs.okhttp
     implementation libs.utilcodex
     implementation libs.appintro
+    implementation libs.gson
 
   implementation(project(":terminal-view"))
   implementation(project(":terminal-emulator"))

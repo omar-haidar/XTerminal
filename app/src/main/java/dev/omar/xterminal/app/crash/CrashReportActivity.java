@@ -7,7 +7,9 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import dev.omar.xterminal.databinding.ActivityCrashReportBinding;
+import com.blankj.utilcode.util.ClipboardUtils;
+import com.blankj.utilcode.util.ToastUtils;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class CrashReportActivity extends AppCompatActivity {
     private static final String EXTRA_CRASH_MESSAGE = "EXTRA_CRASH_MESSAGE";
@@ -15,20 +17,25 @@ public class CrashReportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityCrashReportBinding binding = ActivityCrashReportBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
         String message = "No error message!";
 
         if (getIntent().hasExtra(EXTRA_CRASH_MESSAGE)) {
             message = getIntent().getStringExtra(EXTRA_CRASH_MESSAGE);
         }
-        binding.logText.setText(message);
-        binding.closeButton.setOnClickListener(v -> {
-            finish();
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(0);
+        final String finalMessage = message;
+        MaterialAlertDialogBuilder dialogBuilder = new MaterialAlertDialogBuilder(this);
+        dialogBuilder.setTitle("An error occurred");
+        dialogBuilder.setMessage(message);
+        dialogBuilder.setCancelable(false);
+        dialogBuilder.setPositiveButton("Copy", (d, i) -> {
+            ClipboardUtils.copyText("Error", finalMessage);
+            ToastUtils.showShort("Copied!");
         });
+        dialogBuilder.setNegativeButton("Exit", (d, i) -> {
+            finish();
+        });
+        dialogBuilder.show();
 
     }
 

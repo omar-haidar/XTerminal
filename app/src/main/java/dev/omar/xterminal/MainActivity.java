@@ -1,20 +1,14 @@
 package dev.omar.xterminal;
 
-import android.content.ComponentName;
-import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.IBinder;
 
 import androidx.fragment.app.FragmentTransaction;
 
 import dev.omar.xterminal.app.base.BaseActivity;
 import dev.omar.xterminal.databinding.ActivityMainBinding;
 import dev.omar.xterminal.ui.fragments.BaseFragment;
-import dev.omar.xterminal.ui.fragments.MainFragment;
-import dev.omar.xterminal.ui.fragments.WizardFragment;
-import dev.omar.xterminal.utils.FileUtil;
 
-public class MainActivity extends BaseActivity implements ServiceConnection {
+public class MainActivity extends BaseActivity {
     private ActivityMainBinding binding;
 
     @Override
@@ -22,13 +16,7 @@ public class MainActivity extends BaseActivity implements ServiceConnection {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        if (savedInstanceState == null) {
-            if (!FileUtil.isFilesDownloaded()) {
-                loadFragment(new WizardFragment(), false,WizardFragment.TAG);
-            } else {
-                loadFragment(new MainFragment(), false);
-            }
-        }
+
 
     }
 
@@ -52,13 +40,4 @@ public class MainActivity extends BaseActivity implements ServiceConnection {
         loadFragment(fragment, addToBackStack, null);
     }
 
-    @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
-
-    }
-
-    @Override
-    public void onServiceDisconnected(ComponentName name) {
-
-    }
 }
